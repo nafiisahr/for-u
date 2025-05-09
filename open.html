@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Are You Ready?</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: sparkle 2s infinite alternate;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    @keyframes sparkle {
+      0% { background-color: #000000; }
+      50% { background-color: #1a1a1a; }
+      100% { background-color: #000000; }
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 2px solid white;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff69b4;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #ff1493;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Are you ready?</h1>
+    <button class="btn" onclick="location.href='open2.html'">Yes</button>
+  </div>
+</body>
+</html>

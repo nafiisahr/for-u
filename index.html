@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Halaman Utama</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(to top, #69c0ec, #cceeff); /* langit biru muda */
+    }
+
+    /* Awan bergerak */
+    .cloud {
+      position: absolute;
+      background-image: url('https://pngimg.com/uploads/cloud/cloud_PNG16.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 120px;
+      opacity: 0.8;
+      animation: moveCloud 60s linear infinite;
+    }
+
+    .cloud:nth-child(1) {
+      top: 50px;
+      left: -300px;
+      animation-delay: 0s;
+    }
+
+    .cloud:nth-child(2) {
+      top: 150px;
+      left: -600px;
+      animation-delay: 20s;
+    }
+
+    .cloud:nth-child(3) {
+      top: 250px;
+      left: -900px;
+      animation-delay: 40s;
+    }
+
+    @keyframes moveCloud {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(2000px); }
+    }
+
+    .container {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.4);
+      z-index: 1;
+      color: white;
+    }
+
+    a {
+      display: inline-block;
+      background-color: #eeaa5d;
+      padding: 15px 30px;
+      font-size: 24px;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #d2ff69;
+      transform: scale(1.1);
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Awan animasi -->
+  <div class="cloud"></div>
+  <div class="cloud"></div>
+  <div class="cloud"></div>
+
+  <!-- Konten utama -->
+  <div class="container">
+    <h1>Selamat datang!</h1>
+    <a href="open.html">Klik Di Sini Sayang</a>
+  </div>
+</body>
+</html>
